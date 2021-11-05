@@ -17,7 +17,25 @@ Participants :
 
 ### Data-Driven Approach
 
+#### SMOTE : Synthetic Minority Over-sampling TEchnique
+
+This paper shows that a combination of our method of **over-sampling the minority (abnormal) class and under-sampling the majority (normal) class** can achieve better classifier performance (in ROC space) than only under-sampling the majority class.       
+
+This paper also shows that a combination of our method of over-sampling the minority class and under-sampling the majority class can achieve better classifier performance (in ROC space) than varying the loss ratios in Ripper or class priors in Naive Bayes.            
+
+<figure style="text-align:center">
+  <img src="./Images/Figure_1.png" style="width:70%;"/>
+  <figcaption>Fig.1 SMOTE Approach</figcaption>
+</figure>
+
+
+**`DATABASE :`** We plan to use the Pima Indians Diabetes Database, which contains 2 classes and 768 samples. The reason for choosing this was, that it's a medical database and thus, is a realistic scenario where such class imbalances occour. Number of positive class samples is only 268.    
+
+
 ### Algorithm Driven Approach       
+
+
+
 
 ## Expected Deliverables    
 
