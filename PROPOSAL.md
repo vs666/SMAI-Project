@@ -13,13 +13,15 @@ Participants :
 
 ## Problem Statement
 
-## Goals & Approach     
+## Goals and Approach     
 
 ### Data-Driven Approach
 
 ### Algorithm Driven Approach       
 
 ## Expected Deliverables    
+
+
 
 ## Milestones and Timeline  
 
