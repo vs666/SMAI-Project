@@ -23,6 +23,7 @@ This paper shows that a combination of our method of **over-sampling the minorit
 
 This paper also shows that a combination of our method of over-sampling the minority class and under-sampling the majority class can achieve better classifier performance (in ROC space) than varying the loss ratios in Ripper or class priors in Naive Bayes.            
 
+
 <figure style="text-align:center">
   <img src="./Images/Figure_1.png" style="width:70%;"/>
   <figcaption>Fig.1 SMOTE Approach</figcaption>
