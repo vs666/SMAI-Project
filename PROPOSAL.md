@@ -30,15 +30,16 @@ This paper also shows that a combination of our method of over-sampling the mino
 </figure>
 
 
-**`DATABASE :`** We plan to use the Pima Indians Diabetes Database, which contains 2 classes and 768 samples. The reason for choosing this was, that it's a medical database and thus, is a realistic scenario where such class imbalances occour. Number of positive class samples is only 268.    
-
+**`DATASET :`** We plan to use the Pima Indians Diabetes Database, which contains 2 classes and 768 samples. The reason for choosing this was, that it's a medical database and thus, is a realistic scenario where such class imbalances occour. Number of positive class samples is only 268.    
+[Link-to-Dataset](https://www.kaggle.com/uciml/pima-indians-diabetes-database)  
 
 ### Algorithm Driven Approach       
 
-
+#### 
 
 
 ## Expected Deliverables    
+
 
 
 
