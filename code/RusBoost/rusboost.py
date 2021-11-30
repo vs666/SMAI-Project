@@ -7,6 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1MQ6LcYF4g-C64Mgsdf81l7rs7X2uDOAy
 """
 
+from os import minor
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import make_classification
@@ -94,10 +95,26 @@ def main(classifier_label,minority_fraction,n_features,n_samples,n_classifiers,t
   print('Majority Accuracy ',majo[1]/sum(majo)*100)
   print('Minority Accuracy',mino[0]/sum(mino)*100)
   print('\t\ty-pred=0\ty-pred=1')
-  print('y-true = 1\t',majo[0],'|\t',majo[1])
-  print('y-true = 0\t',mino[0],'|\t',mino[1])
+  print('y-true = 1\t',majo[0],'\t|\t',majo[1])
+  print('y-true = 0\t',mino[0],'\t|\t',mino[1])
 
 
 if __name__ == '__main__':
-  pass 
+  try:
+    classifier_label = sys.argv[1]
+    minority_fraction = float(sys.argv[2])
+    n_features = int(sys.argv[3]) or 4
+    n_samples = int(sys.argv[4]) or 1000 
+    n_classifiers = int(sys.argv[5]) or 100
+    test_size = float(sys.argv[6]) or 0.2
+    main(classifier_label,minority_fraction,n_features,n_samples,n_classifiers,test_size)
+  except:
+    print("Invalid Input format. Please follow the following format.")
+    print("python3 rusboost.py [Classifier-Label] [Minority-Fraction] [n-features] [n-samples] [n-classifiers] [test-size]")
+    print("Classifier-Label : SVM/DecisionTree")
+    print("Minority Fraction : float in range (0,0.5) exclusive")
+    print("n-features :int  >= 4 (number of features in the dataset")
+    print("n-samples :int  (number of samples in the dataset)")
+    print("n-classifiers : int (number of classifiers that the AdaBoost algorithm has ")
+    print("test-size : float fraction of total data as the test data")
   # Write code here to call main()
