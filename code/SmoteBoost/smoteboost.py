@@ -88,7 +88,7 @@ if __name__ == '__main__':
     main(classifier_label,minority_fraction,n_features,n_samples,n_classifiers,test_size)
   except:
     print("Invalid Input format. Please follow the following format.")
-    print("python3 rusboost.py [Classifier-Label] [Minority-Fraction] [n-features] [n-samples] [n-classifiers] [test-size]")
+    print("python3 smoteboost.py [Classifier-Label] [Minority-Fraction] [n-features] [n-samples] [n-classifiers] [test-size]")
     print("Classifier-Label : SVM/DecisionTree")
     print("Minority Fraction : float in range (0,0.5) exclusive")
     print("n-features :int  >= 4 (number of features in the dataset")
