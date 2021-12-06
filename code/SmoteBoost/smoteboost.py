@@ -11,6 +11,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import make_classification
 import matplotlib.pyplot as plt
+from sklearn.metrics import f1_score,plot_confusion_matrix,accuracy_score,roc_auc_score,auc,roc_curve
 import numpy as np
 import random
 from sklearn.tree import DecisionTreeClassifier
@@ -75,7 +76,17 @@ def main(classifier_label,minority_fraction,n_features,n_samples,n_classifiers,t
   print('Minority Accuracy',mino[0]/sum(mino)*100)
   print('Majority',majo)
   print('Minority',mino)
-
+  F1Score = f1_score(y_test,y_pred,average='weighted')
+  fpr, tpr,tmp = roc_curve(y_test, y_pred)
+  aucsc = auc(fpr,tpr)
+  print('Majority Accuracy ',majo[1]/sum(majo)*100)
+  print('Minority Accuracy',mino[0]/sum(mino)*100)
+  print('\t\ty-pred=0\ty-pred=1')
+  print('y-true = 1\t',majo[0],'\t|\t',majo[1])
+  print('y-true = 0\t',mino[0],'\t|\t',mino[1])
+  print("F1-Score",F1Score)
+  print("AUC-SCORE",aucsc)
+    
 
 if __name__ == '__main__':
   try:
